@@ -1,0 +1,734 @@
+@import url('../css/bootstrap.css');
+@import url('../css/animate.css');
+@import url('../css/jquery.fancybox.min.css');
+@import url('../css/slick.css');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css");
+@import url("../fonts/transfonter.org-20230821-184905/stylesheet.css");
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+
+
+
+
+
+:root {
+    --primary-color:orange;
+    --bg-lite: white;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+
+.theme-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+}
+
+.theme-btn {
+    color: white;
+    border: 1px solid white;
+    padding: 6px 34px;
+    transition: all ease 0.4s;
+    font-size: 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.theme-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-5px);
+    border: 1px solid var(--primary-color);
+}
+
+/* Header */
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 23px;
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    margin-top: 40px;
+    z-index: 9999999;
+}
+
+.navigation ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navigation ul li a::before {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0%;
+    background: var(--bg-lite);
+    height: 2px;
+    content: "";
+    transition: 0.50s ease;
+}
+
+.navigation ul li a:hover:before {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-lite);
+    height: 2px;
+    content: "";
+    transition: 0.50s ease;
+}
+
+.logo h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.logo h1 span {
+    background: var(--primary-color);
+}
+
+/* Header End */
+/* Banner Start */
+
+.banner_content {
+    color: var(--bg-lite);
+}
+
+.banner_content h5 {
+    font-size: 37px;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.banner_content h1 {
+    font-size: 65px;
+    line-height: 87px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner_content h1 span {
+    background: var(--primary-color);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.banner_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner_content {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    transform: translateY(-50%);
+}
+
+/* Banner End */
+/* search by reference start */
+
+.main_search_by_reference {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 2px 4px 16px 7px;
+    margin-top: -70px;
+    z-index: 99999999999999;
+    position: relative;
+}
+.main_search_by_reference {
+    -webkit-animation: mymove 2s ease 0.5s infinite;
+    animation: mymove 2s ease 0.5s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.search_by_reference {
+    border-right: 1px solid gray;
+    height: 70px;
+}
+
+.search_by_reference select {
+    border: none;
+    display: flex;
+    width: 90%;
+    outline: none;
+    font-size: 15px;
+    color: #384A4E;
+    font-weight: 500;
+}
+
+.search_by_reference h5 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #384A4E;
+    text-transform: uppercase;
+}
+
+.search_by_reference.pricing {
+    border: navajowhite;
+    display: flex;
+    gap: 50px;
+}
+
+.search_by_reference span {
+    font-size: 15px;
+    color: #384A4E;
+    font-weight: 500;
+}
+
+.search_by_reference.pricing i {
+    font-size: 50px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form.form_option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-top: -12px;
+}
+
+/* search by reference End */
+
+/* About Us Start */
+.about_us_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.main_about_us {
+    padding: 100px 0px;
+}
+
+.about_us_content h2 {
+    font-size: 70px;
+    text-transform: capitalize;
+    font-family: 'Cartis Beautyful';
+    margin: 0;
+}
+
+.about_us_content h1 {
+    font-family: 'Cartis Beautyful';
+    text-transform: capitalize;
+    font-size: 90px;
+    font-weight: 600;
+}
+
+.about_us_content p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#counter {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+    width: 100%;
+}
+
+#counter .item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+#counter .item .count {
+    color: #3A5AFF;
+    margin-bottom: 5px;
+    font-size: 60px;
+}
+
+#counter .item h3 {
+    color: gray;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.about_us_content a {
+    color: black;
+    border: 1px solid black;
+}
+
+/* About Us end */
+/* <!-- Featured Properties Start --> */
+.main_featured_properties {
+    background: url(../images/featured-properties-bg.png) center, center/cover no-repeat;
+    color: var(--bg-lite);
+    padding: 150px 0px;
+}
+
+.featured_properties_card {
+    position: relative;
+    transition: 0.50s ease;
+}
+
+.featured_properties_card_content {
+    position: absolute;
+    bottom: -30px;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 20px 10px;
+    width: 90%;
+    left: 14px;
+    border-radius: 20px;
+    transition: 0.50s ease;
+}
+
+.featured_properties_card_content h2 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.featured_properties_card_content span {
+    color: #3A5AFF;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.featured_properties_card_content p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0px;
+}
+
+.featured_properties_card_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.featured_properties_arrow {
+    position: absolute;
+    bottom: 0px;
+    right: .0;
+    font-size: 50px;
+    background: #3A5AFF;
+    padding: 0px 20px;
+    border-radius: 50px 0px 16px 0px;
+    display: none;
+    transition: 0.50s ease;
+}
+
+.featured_properties_card:hover .featured_properties_card_content {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background: transparent;
+}
+
+.featured_properties_card:hover .featured_properties_arrow {
+    display: block;
+    transition: 0.50s ease !important;
+}
+
+.featured_properties_card:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff91;
+    border-radius: 0px 0px 20px 20px;
+    transition: 0.50s ease !important;
+}
+
+.featured_properties_arrow a i {
+    color: white;
+    cursor: pointer !important;
+}
+
+.featured_properties_card_content_detail h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+}
+
+.main_featured_properties_heading h1 {
+    font-family: 'Cartis Beautyful';
+    text-transform: capitalize;
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+/* <!-- Featured Properties end --> */
+
+/* properties in cities start */
+.main_properties_in_cities {
+    padding: 100px 0px;
+}
+
+.main_properties_in_cities_heading h1 {
+    font-family: 'Cartis Beautyful';
+    text-transform: capitalize;
+    font-size: 60px;
+    font-weight: revert;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.properties_incity_card_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.properties_incity_card_content ul.house_tabs {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 10px 0px 15px;
+}
+
+ul.house_tabs li {
+    color: gray;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.properties_incity_card_content span {
+    color: #3A5AFF;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.properties_incity_card_content p {
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.properties_incity_card_content ul.house_icon {
+    display: flex;
+    font-size: 30px;
+    gap: 26px;
+    padding: 10px 0px 0px;
+}
+
+.properties_incity_card_content ul.house_icon li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.properties_incity_card_content ul.house_icon li span {
+    font-size: 11px;
+    color: black;
+}
+
+.properties_incity_card_content {
+    padding: 0px 10px;
+}
+
+.properties_incity_card:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1), 0px 165px 66px rgba(0, 0, 0, 0.01), 0px 93px 56px rgba(0, 0, 0, 0.05), 0px 41px 41px rgba(0, 0, 0, 0.09), 0px 10px 23px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding-bottom: 10px;
+    transition: 0.50s ease;
+}
+
+.properties_incity_card {
+    transition: 0.50s ease;
+    position: relative;
+    margin-top: 60px;
+}
+
+.properties_incity_card_img_heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.properties_incity_card_img_heart a i {
+    background: var(--bg-lite);
+    padding: 10px;
+    border-radius: 50%;
+    color: black;
+}
+
+ul#pills-tab {
+    justify-content: space-around;
+}
+
+
+/* properties in cities end */
+
+/* <!-- Find your perfect home start --> */
+.main_find_your_perfect_home {
+    background: url(../images/find_your_perfect_bg.png) center center/cover no-repeat;
+    color: var(--bg-lite);
+    text-align: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_find_your_perfect_content h6 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: 'Cartis Beautyful';
+    margin: 0;
+}
+
+.main_find_your_perfect_content h1 {
+    font-size: 90px;
+    text-transform: capitalize;
+    font-family: 'Cartis Beautyful';
+    margin: 10px auto;
+    width: 80%;
+    line-height: 80px;
+}
+
+.main_find_your_perfect_content p {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.main_find_your_perfect_content .theme-group {
+    justify-content: center;
+    margin-top: 20px;
+}
+.main_find_your_perfect_content {
+
+    -webkit-animation: mymove 2s ease 0.5s infinite;
+    animation: mymove 2s ease 0.5s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+/* <!-- Find your perfect home end --> */
+/* <!-- Our latest news start --> */
+.main_our_latest_news {
+    padding: 100px 0px;
+    text-align: center;
+}
+
+.our_latest_news_content h6 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: 'Cartis Beautyful';
+    margin: 0;
+}
+
+.our_latest_news_content h1 {
+    font-size: 80px;
+    text-transform: capitalize;
+    font-family: 'Cartis Beautyful';
+    font-weight: 600;
+}
+
+.our_latest_news_content p {
+    font-size: 17px;
+    width: 60%;
+    margin: 20px auto 50px;
+    font-weight: 500;
+}
+
+.our_latest_news_input input[type="email"] {
+    width: 60%;
+    outline: none;
+    padding: 16px 10px;
+    color: black;
+    box-shadow: 3px 2px 20px 0px;
+    border: none;
+    border-radius: 10px;
+}
+
+.our_latest_news_input {
+    position: relative;
+}
+
+.our_latest_news_input input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 260px;
+    font-size: 22px;
+    background: #3D5CFF;
+    color: white;
+    cursor: pointer;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* <!-- Our latest news end --> */
+/* Ge in Touch Start */
+.main_get_in_touch {
+    background: url(../images/contact_us_bg.png) center center/cover no-repeat;
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.get_in_touch_heading h1 {
+    font-size: 60px;
+    text-transform: capitalize;
+    font-family: 'Cartis Beautyful';
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.get_intouch_form input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid gray;
+    color: black;
+    padding: 10px 10px;
+    margin-bottom: 40px;
+    outline: none;
+}
+
+.get_intouch_form textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid gray;
+    color: black;
+    padding: 10px 10px;
+    margin-bottom: 40px;
+    resize: none;
+    outline: none;
+}
+
+.get_intouch_form label {
+    color: gray;
+    padding: 0px 10px;
+    font-size: 18px;
+}
+
+.get_intouch_form a.theme-btn {
+    color: black;
+    border: 1px solid;
+}
+
+.get_intouch_form a.theme-btn:hover {
+    color: white;
+}
+
+/* Ge in Touch end */
+/* footer start */
+.main_footer {
+    background-image: url(../images/footer_bg.png);
+    background-color: #001bb3d4;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.main_footer h1 {
+    font-size: 50px;
+    font-family: 'Cartis Beautyful';
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.main_footer h2 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: 'Cartis Beautyful';
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.main_footer ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main_footer ul li a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+.main_footer p {
+    font-size: 14px;
+    width: 90%;
+    color: darkgray;
+}
+
+.footer_line {
+    width: 100%;
+    height: 1px;
+    background: gray;
+    margin: 20px 0px;
+}
+
+.bottom_footer {
+    text-align: center;
+    color: darkgray;
+}
